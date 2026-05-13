@@ -123,7 +123,6 @@
     #home { display: none; flex-direction: column; }
     #home.active { display: flex; }
 
-    /* FIX: Hero section — hapus min-height 100vh, pakai padding saja biar tidak terlalu tinggi */
     .hero {
       padding: 3rem 4rem 3.5rem;
       display: flex;
@@ -131,7 +130,6 @@
       justify-content: space-between;
       gap: 2rem;
       position: relative;
-      overflow: hidden;
     }
     .hero::before {
       content: '';
@@ -223,13 +221,13 @@
       transform: translateY(-2px);
     }
 
-    /* FIX: Avatar wrapper — hapus margin-left kaku, pakai flex gap di parent */
+    /* FIX: Avatar wrapper — beri padding kanan agar chip-3 tidak overflow */
     .hero-avatar {
       flex: 0 0 auto;
+      padding: 1rem 6rem 1rem 6rem; /* kiri & kanan untuk ruang chip */
       animation: fadeUp 0.8s 0.2s ease both;
     }
 
-    /* FIX: Avatar ring ukuran sedikit dikurangi agar proporsional */
     .avatar-ring {
       width: 300px; height: 300px;
       border-radius: 50%;
@@ -279,10 +277,10 @@
       white-space: nowrap;
       z-index: 2;
     }
-    /* Chips sekarang relative ke avatar-ring, tidak ke luar viewport */
-    .chip-1 { top: 8%; left: -80px; animation: float 3s ease-in-out infinite; }
-    .chip-2 { bottom: 15%; left: -90px; animation: float 3s 1s ease-in-out infinite; }
-    .chip-3 { top: 22%; right: -85px; animation: float 3s 0.5s ease-in-out infinite; }
+    /* Chips masuk ke dalam padding hero-avatar, tidak overflow */
+    .chip-1 { top: 10%; left: -88px; animation: float 3s ease-in-out infinite; }
+    .chip-2 { bottom: 18%; left: -95px; animation: float 3s 1s ease-in-out infinite; }
+    .chip-3 { top: 25%; right: -92px; animation: float 3s 0.5s ease-in-out infinite; }
 
     /* skills strip */
     .skills-strip {
