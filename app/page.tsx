@@ -58,7 +58,7 @@ const projectsData: Project[] = [
     id: 'homezy', name: 'Homezy', type: 'Full Stack',
     tagline: 'Property listing platform with backend.',
     description: 'Full-stack web application for property listings featuring user authentication, CRUD operations, and a clean interface backed by a robust API.',
-    tags: ['Laravel', 'Fullstack', 'Database'],
+    tags: ['Next.js', 'Fullstack', 'Database'],
     url: 'https://homezy-lyart.vercel.app/',
     image: '/image/homezy.jpeg'
   },
@@ -162,16 +162,24 @@ export default function Home() {
                   View Work
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                 </a>
-                <a onClick={() => changeTab('about')} className="btn btn-secondary">Contact Me</a>
+                <a 
+                href="https://instagram.com/vygoodd" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="btn btn-secondary">
+                Contact Me
+              </a>
               </div>
             </div>
 
             <div className="hero-avatar reveal">
               <div className="avatar-ring">
-                <div className="avatar-img-wrap">VSR</div>
+                <div className="avatar-img-wrap">
+                  <img src="/image/profil.jpeg" alt="Photo Profil" style={{width: '100%', height: '100%', objectFit: 'cover', borderRadius: '50%'}} />
+                </div>
                 <div className="skill-chip chip-1">⚡ Laravel</div>
                 <div className="skill-chip chip-2">⚛️ React</div>
-                <div className="skill-chip chip-3">🎨 UI/UX</div>
+                <div className="skill-chip chip-3">🧩 HTML/CSS</div>
               </div>
             </div>
           </div>
